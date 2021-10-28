@@ -15,8 +15,7 @@ npm install react-native-reanimated
 ```
 
 ## Demo
-
-![image demo](images/demo1.gif =x300)
+<img src="images/demo1.gif" width="300">
 
 ## Props
 
