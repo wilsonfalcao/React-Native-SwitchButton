@@ -1,23 +1,31 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { View,StyleSheet} from 'react-native';
 
 //telas
-import Main from "./src/page/main/main";
-import AirMenu from "./src/page/airmenu";
+import SwitchButton from './component/switchButton';
 
 export default function App() {
+
+  const [validSwitchButton, setValidSwitchButton] = useState(false);
 
   return (
     <View style={{
         flex:1,
+        justifyContent:"center",
+        alignItems:"center",
       }}
     >
-      <View style={{
-        position:"absolute",
-        bottom:"45%",
-        right:"44%",
+      <View style={{ 
+        width:140,
+        height:40,
       }}>
-        <AirMenu />
+        <SwitchButton
+          NameOn={"SIM"}
+          NameOff={"NÃO"}
+          Width={140}
+          Height={40} 
+          IsOn={setValidSwitchButton} 
+        />
       </View>
     </View>
   );
